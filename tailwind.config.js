@@ -4,6 +4,13 @@ module.exports = {
   theme: {
     extend: {
 
+        keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translate-x-[30rem]' },
+          '50%': { transform: 'translate-x-[30rem]' },
+        },
+
+      },
 
       fontFamily: {
 
@@ -42,6 +49,7 @@ module.exports = {
       '2000':'2000px',
 
     },
+
    }
   },
   plugins: [],

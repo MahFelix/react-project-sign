@@ -25,6 +25,7 @@ module.exports = {
         'regcolor':'#003136',
         'blackp': '#313634',
         'blue':'#027fe9',
+      
     },
 
     spacing: {

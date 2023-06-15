@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useState, useRef, useTransition } from 'react'
 import logo from '../../assets/logo2.png'
 import icon1 from '../../assets/icon1.svg'
 import icon2 from '../../assets/icon2.svg'
@@ -13,6 +13,37 @@ import icon6 from '../../assets/Logo-bg3.svg'
 
 
 function App() {
+ const [loginOrRegister, SetloginOrRegister] = useState('login')
+
+
+
+ function MoveX(){
+
+  if( loginOrRegister === 'login'){
+    return '100%'
+
+  }
+  else{
+    return '0%'
+  }
+
+ }
+
+ function ClickToMove(){
+
+ if( loginOrRegister === 'login'){
+   SetloginOrRegister('register')
+
+  }
+  else{
+    SetloginOrRegister('login')
+  }
+
+ }
+
+
+
+
 
 
   return (
@@ -28,10 +59,12 @@ function App() {
 
 
 
-          <div className="bg-divsec flex shadow-lg w-900 h-600 mt-20 justify- z-10 border border-regcolor ">
+          <div  className="bg-divsec flex shadow-lg w-900 h-600 mt-20 justify- z-10 border border-regcolor ">
 
-            <div className='absolute' >
-              <img className='bg-butcolor w-450 h-600  ease-linear duration-75 animate-wiggle ' src={icon6} ></img>
+
+            <div style={{transform:`translateX(${MoveX()})`}} className='absolute transition-transform duration-700' >
+              <img  className='bg-butcolor w-450 h-600  ' src={icon6} ></img>
+
 
             </div>
             <img className='w-20 h-20 mt-5 ml-2' src={logo}></img>
@@ -54,7 +87,7 @@ function App() {
 
               <button className=" bg-butcolor font-bold text-white mt-5 w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70"> Entrar </button>
 
-              <a className="font-bold mt-5 text-xs text-regcolor cursor-pointer font-Poppins hover:text-blue" > Não tenho conta </a>
+              <a onClick={ClickToMove} className="font-bold mt-5 text-xs text-regcolor cursor-pointer font-Poppins hover:text-blue" > Não tenho conta </a>
             </div>
 
             <main className=" ml-[70px] flex justify-center items-center  flex-col flex-1 ">
@@ -73,7 +106,7 @@ function App() {
                   <label className="font-bold text-2xl font-Poppins text-blackp">Confirmar senha </label>
                   <input placeholder="Senha" className=" w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-5"></input>
 
-                  <button className=" bg-butcolor font-bold text-white mt-5 w-300 cursor-pointer h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70 "> Registrar </button>
+                  <button onClick={ClickToMove} className=" bg-butcolor font-bold text-white mt-5 w-300 cursor-pointer h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70 "> Registrar </button>
              </div>
 
             </main>

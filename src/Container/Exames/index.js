@@ -63,7 +63,7 @@ function Exame() {
                   </option>
 
                    <option>
-                        Laboratoriais
+                        Laboratorio
                   </option>
 
                    <option>

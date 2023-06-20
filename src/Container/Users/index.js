@@ -6,6 +6,7 @@ import icon2 from '../../assets/icon2.svg'
 import icon3 from '../../assets/icon3.svg'
 import icon4 from '../../assets/icon4.svg'
 import icon5 from '../../assets/icon5.svg'
+import trash from '../../assets/lixeira.svg'
 
 
 
@@ -32,37 +33,54 @@ function User() {
              <h1 className=' font-bold text-5xl  text-black font-Poppins '> FILA DE ESPERA </h1>
 
               <div className="bg-[#90B4B8]  shadow-lg w-[800px] h-[700px] z-10 border border-regcolor rounded-lg  ">
-                  <div className='bg-[#D9D9D9] w-[799px] flex flex-row items-center border-[1px] border-t-0 border-slate-950 rounded-lg h-[20px] justify-center' >
-                      <h2 className='font-bold ml-10 mr-20 '> Nome </h2>
-                      <h2 className='font-bold ml-10 mr-20 ' > Idade </h2>
-                      <h2 className='font-bold ml-10 mr-20 ' > Tipo de Exame</h2>
-                      <h2 className='font-bold ml-10 mr-10 ' > Senha </h2>
+                  <div>
+                      <ul className='bg-[#D9D9D9] w-[799px] flex flex-row items-center border-[1px] border-t-0 border-slate-950 rounded-lg h-[20px] justify-center '>
+                        <li className='font-bold ml-10 mr-20 '> Nome </li>
+                        <li className='font-bold ml-10 mr-20 ' > Idade </li>
+                        <li className='font-bold ml-10 mr-20 ' > Tipo de Exame</li>
+                        <li className='font-bold ml-10 mr-10 ' > Senha </li>
+                      </ul>
                   </div>
 
-                  <div className='mt-2 '>
-
-                  <input  placeholder='             Jão da quebrada                          45                                     Ultrassom                                   023
-
-' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px]  border-slate-950'>
-                  </input>
-
-                         <input  placeholder='             Maria Auxiliadora                        90                                     Raio-X                                         024
-
-' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px]  border-slate-950'>
-                  </input>
+                  <div className='mt-2 flex justify-evenly flex-col'>
 
 
-                         <input  placeholder='             Martinho da  Vila                         55                                     Laboratorio                                025
+                    <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around  items-center border-slate-950'>
+                      <p className='mr-10'> Maria Auxiliadora </p>
+                      <p className='mr-100 ml-10'> 90 </p>
+                      <p className='mr-50'> Raio-X </p>
+                      <p className='ml-100'> 024</p>
+                      <button> <img src={trash}/> </button>
+                  </div>
 
-' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px]  border-slate-950'>
 
-                  </input>
+                       <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around  items-center border-slate-950'>
+                      <p className='mr-10'> João da quebrada</p>
+                      <p className='mr-100 ml-10'> 52 </p>
+                      <p className='mr-50'> Ultrasson </p>
+                      <p className='ml-100'> 025 </p>
+                      <button> <img src={trash}/> </button>
+                  </div>
 
 
-                <input  placeholder='             Romeu e Juliete                        45                                     Audiometria                                   026
 
-' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px]  border-slate-950'>
-                  </input>
+                       <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around items-center  border-slate-950'>
+                      <p className='mr-10'> Magazine Luiza </p>
+                      <p className='mr-100 ml-10'> 100 </p>
+                      <p className='mr-50'> Laboratorio </p>
+                      <p className='ml-100'> 027</p>
+                      <button> <img src={trash}/> </button>
+                  </div>
+
+
+
+             <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around  items-center  border-slate-950'>
+                      <p className='mr-10'> Romeu e Julieta </p>
+                      <p className='mr-100 ml-10'> 30 </p>
+                      <p className='mr-50'> Video Faringo </p>
+                      <p className='ml-100'> 030</p>
+                      <button> <img src={trash}/> </button>
+                  </div>
 
 
 

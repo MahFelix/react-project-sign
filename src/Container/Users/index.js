@@ -38,11 +38,11 @@ function User() {
 
               <div className="bg-[#90B4B8]  shadow-lg w-[800px] h-[700px] z-10 border border-regcolor rounded-lg  ">
                   <div>
-                      <ul className='bg-[#D9D9D9] w-[799px] flex flex-row items-center border-[1px] border-t-0 border-slate-950 rounded-lg h-[20px] justify-center '>
+                      <ul className='bg-[#D9D9D9] w-[799px] flex flex-row items-center border-[1px] border-t-0 border-slate-950 rounded-lg h-[20px]  pl-[50px] justify-center justify-between '>
                         <li className='font-bold ml-10 mr-20 '> Nome</li>
                         <li className='font-bold ml-10 mr-20 ' > Idade </li>
-                        <li className='font-bold ml-10 mr-20 ' > Tipo de Exame</li>
-                        <li className='font-bold ml-10 mr-10 ' > Senha</li>
+                        <li className='font-bold  ' > Tipo de Exame</li>
+                        <li className='font-bold ml-10 mr-10 pr-[90px]' > Senha</li>
                       </ul>
 
                   </div>
@@ -50,40 +50,40 @@ function User() {
                   <div className='mt-2 flex justify-evenly flex-col'>
 
 
-                    <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around  items-center border-slate-950'>
-                      <p className='mr-10'> Maria  </p>
-                      <p className='mr-100 ml-10'> 90 </p>
-                      <p className='mr-50'> Raio-X </p>
-                      <p className='ml-100'> 024</p>
+                    <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-between pl-[90px] pr-[10px] items-center border-slate-950'>
+                      <p className=''> Maria  </p>
+                      <p className=''> 90 </p>
+                      <p className=''> Raio-X </p>
+                      <p className=''> 024</p>
                       <button> <img src={trash}/></button>
                   </div>
 
 
-                       <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around  items-center border-slate-950'>
-                      <p className='mr-10'> João </p>
-                      <p className='mr-100 ml-10'> 52 </p>
-                      <p className='mr-50'> Ultrasson </p>
-                      <p className='ml-100'> 025 </p>
-                      <button> <img src={trash}/></button>
-                  </div>
-
-
-
-                       <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around items-center  border-slate-950'>
-                      <p className='mr-10'> Thiago  </p>
-                      <p className='mr-100 ml-10'> 100 </p>
-                      <p className='mr-50'> Laboratorio </p>
-                      <p className='ml-100'> 027</p>
+                       <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-between pl-[90px] pr-[10px] items-center border-slate-950'>
+                      <p className=''> João </p>
+                      <p className=''> 52 </p>
+                      <p className=''> Ultrasson </p>
+                      <p className=''> 025 </p>
                       <button> <img src={trash}/></button>
                   </div>
 
 
 
-             <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-around  items-center  border-slate-950'>
-                      <p className='mr-10'> Pedro </p>
-                      <p className='mr-100 ml-10'> 30 </p>
-                      <p className='mr-50'> Video Faringo </p>
-                      <p className='ml-100'> 030</p>
+                       <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-between pr-[10px] pl-[90px] items-center  border-slate-950'>
+                      <p className=''> Thiago  </p>
+                      <p className=''> 87 </p>
+                      <p className=''> Laboratorio </p>
+                      <p className=''> 027</p>
+                      <button> <img src={trash}/></button>
+                  </div>
+
+
+
+             <div type='text' placeholder=' Jão da quebrada 45 Ultrassom 023' className='bg-[#E8FCF5] w-800 h-10  rounded-xl mt-2  border-[1px] flex justify-between pl-[90px] pr-[10px] items-center  border-slate-950'>
+                      <p className=''> Nucessa</p>
+                      <p className=''> 56 </p>
+                      <p className=''> Video-Faringo </p>
+                      <p className=''> 028</p>
                       <button> <img src={trash}/></button>
                   </div>
 

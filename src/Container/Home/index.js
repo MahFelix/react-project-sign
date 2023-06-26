@@ -1,8 +1,5 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useRef } from 'react'
-
-import axios from 'axios'
+import { Link } from 'react-router-dom';
+import React, { useState} from 'react'
 
 import logo from '../../assets/logo2.png'
 import icon1 from '../../assets/icon1.svg'
@@ -17,30 +14,6 @@ import icon6 from '../../assets/Logo-bg3.svg'
 
 function App() {
  const [loginOrRegister, SetloginOrRegister] = useState('login')
- const [users,setUsers] = useState([])
- const InputName = useRef()
- const InputAge = useRef()
-  const InputPass = useRef()
-
-
-
-
- async function addNewUser(){
-const response = await axios.post('http://localhost:3003/users/', {
- name: InputName.current.value,
- age: InputAge.current.value,
- password: InputPass.current.value,
-
-
-
-  });
-
-  setUsers([
-    ...users,response.data
-  ])
-
-
- }
 
 
  function MoveX(){
@@ -77,7 +50,9 @@ const response = await axios.post('http://localhost:3003/users/', {
 
         </>
 
-
+<Link to="/Exame">
+              <button className=" absolute right-0 bg-[red] font-bold text-white mt-5 w-100 h-[60px] rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70"> Avançar </button>
+</Link>
 
           <div  className="bg-divsec flex shadow-lg w-900 h-600 mt-20 justify- z-10 border border-regcolor ">
 
@@ -94,10 +69,10 @@ const response = await axios.post('http://localhost:3003/users/', {
               <h1 className=" font-bold text-5xl  mb-10 mt-20 ml-20 font-Poppins text-blackp"> Login </h1>
 
               <label className="font-bold text-2xl font-Poppins text-blackp"> Nome de usuário </label>
-              <input  type='text' name='login' ref={InputName} placeholder="Nome de usuário" className=" w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins"></input>
+              <input  type='text' name='login'  placeholder="Nome de usuário" className=" w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins"></input>
 
               <label className="font-bold text-2xl font-Poppins text-blackp">Senha </label>
-              <input type='password' name='password' ref={InputPass}  placeholder="Senha" className=" w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-5 font-Poppins"></input>
+              <input type='password' name='password'  placeholder="Senha" className=" w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-5 font-Poppins"></input>
 
               <div className=" flex ">
                   <input type='checkbox' className="mr-1"></input>
@@ -105,13 +80,13 @@ const response = await axios.post('http://localhost:3003/users/', {
                   <h3 className="text-xs text-white font-Poppins hover:underline cursor-pointer"> não lembro minha senha </h3>
               </div>
 
-              <button onClick={addNewUser} className=" bg-butcolor font-bold text-white mt-5 w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70"> Entrar </button>
+              <button className=" bg-butcolor font-bold text-white mt-5 w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70"> Entrar </button>
 
               <a onClick={ClickToMove} className="font-bold mt-5 text-xs text-regcolor cursor-pointer font-Poppins hover:text-blue" > Não tenho conta </a>
             </form>
 
             <main className=" ml-[70px] flex justify-center items-center  flex-col flex-1 ">
-                 <h1 className=" font-bold text-5xl cursor-pointer font-Poppins text-blackp flex"> Register</h1>
+                 <h1 className=" font-bold  cursor-pointer font-Poppins text-blackp flex"> Register</h1>
 
               <form className='mt-[10px]'>
                   <label className="font-bold text-2xl  font-Poppins text-blackp"> Nome de usuário </label>
@@ -126,7 +101,12 @@ const response = await axios.post('http://localhost:3003/users/', {
                   <label className="font-bold text-2xl font-Poppins text-blackp">Confirmar senha </label>
                   <input placeholder="Senha" className=" w-300 h-11 rounded-md pl-1 flex justify-center items-center mb-5"></input>
 
+
+
                   <button  className=" bg-butcolor font-bold text-white mt-5 w-300 cursor-pointer h-11 rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70 "> Registrar </button>
+
+
+
                   <a onClick={ClickToMove} className="font-bold mt-5 text-xs text-regcolor cursor-pointer flex justify-center font-Poppins hover:text-blue" > já tenho uma conta</a>
              </form>
 
@@ -134,7 +114,6 @@ const response = await axios.post('http://localhost:3003/users/', {
          </div>
 
       </div>
-
 );
 }
 

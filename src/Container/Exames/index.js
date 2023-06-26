@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
+
+import { Link } from 'react-router-dom';
 import React from 'react'
 import icon1 from '../../assets/icon1.svg'
 import icon2 from '../../assets/icon2.svg'
@@ -22,6 +24,10 @@ function Exame() {
         <img className='z-0 absolute left-20 top-1' src={icon4}></img>
 
         </>
+
+          <Link to="/Users">
+                  <button className=" absolute right-0 bg-[red] font-bold text-white mt-5 w-[80px] cursor-pointer h-[60px] rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70 " > Avançar </button>
+         </Link>
 
       <div className="bg-divsec flex  flex-col shadow-lg w-900 h-500  items-center justify-center z-10 border border-regcolor ">
 
@@ -98,7 +104,11 @@ function Exame() {
 
                <div className='flex justify-center items-center'>
 
-                  <button className=" bg-butcolor font-bold text-white mt-5 w-[80px] cursor-pointer h-[60px] rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70 "> GERAR SENHA </button>
+
+                  <button className=" bg-butcolor font-bold text-white mt-5 w-[80px] cursor-pointer h-[60px] rounded-md pl-1 flex justify-center items-center mb-2 font-Poppins active:opacity-70 " > GERAR SENHA </button>
+
+
+
               </div>
 
              </div>
